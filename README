@@ -1,0 +1,84 @@
+faac
+------------------------------------------
+FAAC provides a MPEG-4 AAC encoder library and utility.
+
+Runtime requirements:
+  cygwin-1.5.23-2
+  libmpeg4ip0-1.5.0.1-1
+
+Build requirements:
+  cygwin-1.5.23-2
+  autoconf2.5-2.60-2
+  automake1.10-1.10-1
+  binutils-20060817-1
+  cygport-0.2.7-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://www.audiocoding.com/
+  http://sourceforge.net/projects/faac/
+
+Canonical download:
+  http://prdownloads.sourceforge.net/faac/
+
+-------------------------------------------
+
+Build instructions:
+  unpack faac-1.25-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./faac-1.25-1.cygport all
+
+This will create:
+  /usr/src/faac-1.25-1-src.tar.bz2
+  /usr/src/faac-1.25-1.tar.bz2
+  /usr/src/libfaac-devel-1.25-1.tar.bz2
+  /usr/src/libfaac0-1.25-1.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(faac)
+  /usr/bin/faac.exe
+  /usr/share/doc/Cygwin/faac-1.25.README
+  /usr/share/doc/faac-1.25/AUTHORS
+  /usr/share/doc/faac-1.25/ChangeLog
+  /usr/share/doc/faac-1.25/COPYING
+  /usr/share/doc/faac-1.25/INSTALL
+  /usr/share/doc/faac-1.25/NEWS
+  /usr/share/doc/faac-1.25/README
+  /usr/share/doc/faac-1.25/TODO
+  /usr/share/doc/faac-1.25/html/faac.html
+  /usr/share/doc/faac-1.25/html/libfaac.html
+
+(libfaac0)
+  /usr/bin/cygfaac-0.dll
+
+(libfaac-devel)
+  /usr/include/faac.h
+  /usr/include/faaccfg.h
+  /usr/lib/libfaac.a
+  /usr/lib/libfaac.dll.a
+  /usr/lib/libfaac.la
+
+------------------
+
+Port Notes:
+
+----- version 1.25-1 -----
+Version bump, built with cygport.
+Created separate libfaac0 and libfaac-devel packages.
+
+----- version 1.24-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
