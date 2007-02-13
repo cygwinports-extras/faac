@@ -3,15 +3,15 @@ faac
 FAAC provides a MPEG-4 AAC encoder library and utility.
 
 Runtime requirements:
-  cygwin-1.5.23-2
+  cygwin-1.5.24-2
   libmpeg4ip0-1.5.0.1-1
 
 Build requirements:
-  cygwin-1.5.23-2
-  autoconf2.5-2.60-2
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
   automake1.10-1.10-1
   binutils-20060817-1
-  cygport-0.2.7-1
+  cygport-0.2.9-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
@@ -24,22 +24,22 @@ Canonical website:
   http://sourceforge.net/projects/faac/
 
 Canonical download:
-  http://prdownloads.sourceforge.net/faac/
+  http://downloads.sourceforge.net/faac/
 
 -------------------------------------------
 
 Build instructions:
-  unpack faac-1.25-1-src.tar.bz2
+  unpack faac-1.25-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./faac-1.25-1.cygport all
+  cygport ./faac-1.25-X.cygport all
 
 This will create:
-  /usr/src/faac-1.25-1-src.tar.bz2
-  /usr/src/faac-1.25-1.tar.bz2
-  /usr/src/libfaac-devel-1.25-1.tar.bz2
-  /usr/src/libfaac0-1.25-1.tar.bz2
+  /usr/src/faac-1.25-X-src.tar.bz2
+  /usr/src/faac-1.25-X.tar.bz2
+  /usr/src/libfaac-devel-1.25-X.tar.bz2
+  /usr/src/libfaac0-1.25-X.tar.bz2
 
 -------------------------------------------
 
@@ -71,6 +71,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.25-2 -----
+Removed insufficiently protected int32_t typedef from faac.h.
 
 ----- version 1.25-1 -----
 Version bump, built with cygport.
