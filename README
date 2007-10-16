@@ -4,14 +4,15 @@ FAAC provides a MPEG-4 AAC encoder library and utility.
 
 Runtime requirements:
   cygwin-1.5.24-2
-  libmpeg4ip0-1.5.0.1-1
+  libmp4v2_0-1.6.1-1
 
 Build requirements:
+(besides corresponding devel packages)
   cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.10-1.10-1
   binutils-20060817-1
-  cygport-0.2.9-1
+  cygport-0.3.6-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
@@ -29,17 +30,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack faac-1.25-X-src.tar.bz2
+  unpack faac-1.26-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./faac-1.25-X.cygport all
+  cygport ./faac-1.26-X.cygport all
 
 This will create:
-  /usr/src/faac-1.25-X-src.tar.bz2
-  /usr/src/faac-1.25-X.tar.bz2
-  /usr/src/libfaac-devel-1.25-X.tar.bz2
-  /usr/src/libfaac0-1.25-X.tar.bz2
+  /usr/src/faac-1.26-X-src.tar.bz2
+  /usr/src/faac-1.26-X.tar.bz2
+  /usr/src/libfaac-devel-1.26-X.tar.bz2
+  /usr/src/libfaac0-1.26-X.tar.bz2
 
 -------------------------------------------
 
@@ -47,16 +48,16 @@ Files included in the binary packages:
 
 (faac)
   /usr/bin/faac.exe
-  /usr/share/doc/Cygwin/faac-1.25.README
-  /usr/share/doc/faac-1.25/AUTHORS
-  /usr/share/doc/faac-1.25/ChangeLog
-  /usr/share/doc/faac-1.25/COPYING
-  /usr/share/doc/faac-1.25/INSTALL
-  /usr/share/doc/faac-1.25/NEWS
-  /usr/share/doc/faac-1.25/README
-  /usr/share/doc/faac-1.25/TODO
-  /usr/share/doc/faac-1.25/html/faac.html
-  /usr/share/doc/faac-1.25/html/libfaac.html
+  /usr/share/doc/Cygwin/faac-1.26.README
+  /usr/share/doc/faac-1.26/AUTHORS
+  /usr/share/doc/faac-1.26/ChangeLog
+  /usr/share/doc/faac-1.26/COPYING
+  /usr/share/doc/faac-1.26/INSTALL
+  /usr/share/doc/faac-1.26/NEWS
+  /usr/share/doc/faac-1.26/README
+  /usr/share/doc/faac-1.26/TODO
+  /usr/share/doc/faac-1.26/html/faac.html
+  /usr/share/doc/faac-1.26/html/libfaac.html
 
 (libfaac0)
   /usr/bin/cygfaac-0.dll
@@ -71,6 +72,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.26-1 -----
+Version bump.
 
 ----- version 1.25-2 -----
 Removed insufficiently protected int32_t typedef from faac.h.
