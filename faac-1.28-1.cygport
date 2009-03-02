@@ -1,0 +1,16 @@
+DESCRIPTION="AAC encoder library"
+HOMEPAGE="http://www.audiocoding.com/"
+SRC_URI="mirror://sourceforge/faac/${P}.tar.gz"
+
+PATCH_URI="mirror://portage/media-libs/${PN}/files/${PN}-1.26-external-libmp4v2.patch
+           1.28-no-undefined.patch
+           1.28-int32_t.patch"
+
+PKG_NAMES="${PN} lib${PN}0 lib${PN}-devel"
+faac_CONTENTS='usr/bin/*.exe usr/share/doc/ usr/share/man/man1/'
+libfaac0_CONTENTS='usr/bin/cygfaac-0.dll'
+libfaac_devel_CONTENTS='usr/include/ usr/lib/'
+
+CYGCONF_ARGS="--enable-drm"
+
+HTMLDOCS="docs/*.html"

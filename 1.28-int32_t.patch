@@ -1,0 +1,12 @@
+--- origsrc/faac-1.28/include/faac.h	2009-01-25 12:50:32.000000000 -0600
++++ src/faac-1.28/include/faac.h	2009-03-02 14:25:39.890625000 -0600
+@@ -49,9 +49,6 @@ psymodellist_t;
+ 
+ typedef void *faacEncHandle;
+ 
+-#ifndef HAVE_INT32_T
+-typedef signed int int32_t;
+-#endif
+ 
+ /*
+ 	Allows an application to get FAAC version info. This is intended

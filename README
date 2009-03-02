@@ -3,21 +3,20 @@ faac
 FAAC provides a MPEG-4 AAC encoder library and utility.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  libmp4v2_0-1.6.1-1
+  cygwin-1.5.25-15
+  libmp4v2_0-1.6.1-2
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.24-2
-  autoconf2.5-2.61-1
-  automake1.10-1.10-1
-  binutils-20060817-1
-  cygport-0.3.6-1
-  gawk-3.1.5-4
+  autoconf2.5-2.63-1
+  automake1.10-1.10.1-2
+  binutils-20080624-2
+  cygport-0.4.3-1
+  gawk-3.1.6-1
   gcc-core-3.4.4-3
   gcc-g++-3.4.4-3
-  libtool1.5-1.5.23a-2
-  make-3.81-1
+  libtool-2.2.6a-1
+  make-3.81-2
   sed-4.1.5-2
 
 Canonical website:
@@ -30,17 +29,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack faac-1.26-X-src.tar.bz2
+  unpack faac-1.28-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./faac-1.26-X.cygport all
+  cygport ./faac-1.28-X.cygport all
 
 This will create:
-  /usr/src/faac-1.26-X-src.tar.bz2
-  /usr/src/faac-1.26-X.tar.bz2
-  /usr/src/libfaac-devel-1.26-X.tar.bz2
-  /usr/src/libfaac0-1.26-X.tar.bz2
+  /usr/src/faac-1.28-X-src.tar.bz2
+  /usr/src/faac-1.28-X.tar.bz2
+  /usr/src/libfaac-devel-1.28-X.tar.bz2
+  /usr/src/libfaac0-1.28-X.tar.bz2
 
 -------------------------------------------
 
@@ -48,16 +47,16 @@ Files included in the binary packages:
 
 (faac)
   /usr/bin/faac.exe
-  /usr/share/doc/Cygwin/faac-1.26.README
-  /usr/share/doc/faac-1.26/AUTHORS
-  /usr/share/doc/faac-1.26/ChangeLog
-  /usr/share/doc/faac-1.26/COPYING
-  /usr/share/doc/faac-1.26/INSTALL
-  /usr/share/doc/faac-1.26/NEWS
-  /usr/share/doc/faac-1.26/README
-  /usr/share/doc/faac-1.26/TODO
-  /usr/share/doc/faac-1.26/html/faac.html
-  /usr/share/doc/faac-1.26/html/libfaac.html
+  /usr/share/doc/faac-1.28/AUTHORS
+  /usr/share/doc/faac-1.28/ChangeLog
+  /usr/share/doc/faac-1.28/COPYING
+  /usr/share/doc/faac-1.28/INSTALL
+  /usr/share/doc/faac-1.28/NEWS
+  /usr/share/doc/faac-1.28/README
+  /usr/share/doc/faac-1.28/TODO
+  /usr/share/doc/faac-1.28/html/faac.html
+  /usr/share/doc/faac-1.28/html/libfaac.html
+  /usr/share/man/man1/faac.1.gz
 
 (libfaac0)
   /usr/bin/cygfaac-0.dll
@@ -72,6 +71,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.28-1 -----
+Version bump.
 
 ----- version 1.26-1 -----
 Version bump.

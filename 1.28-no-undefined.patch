@@ -1,0 +1,10 @@
+--- origsrc/faac-1.28/libfaac/Makefile.am	2007-08-20 13:03:23.000000000 -0500
++++ src/faac-1.28/libfaac/Makefile.am	2009-03-02 14:56:00.484375000 -0600
+@@ -6,6 +6,7 @@ drm_SOURCES = kiss_fft/kiss_fftr.c kiss_
+ endif
+ libfaac_la_SOURCES = $(main_SOURCES) $(drm_SOURCES)
+ libfaac_la_INCLUDES = aacquant.h channels.h filtbank.h hufftab.h psych.h backpred.h coder.h frame.h midside.h tns.h bitstream.h fft.h huffman.h ltp.h util.h
++libfaac_la_LDFLAGS = -no-undefined
+ libfaac_la_LIBADD = -lm
+ 
+ INCLUDES = -I$(top_srcdir)/include
