@@ -1,0 +1,45 @@
+--- origsrc/faac-1.28/common/mp4v2/Makefile.am	2009-01-24 19:14:34.000000000 -0600
++++ src/faac-1.28/common/mp4v2/Makefile.am	2009-04-05 06:15:26.687500000 -0500
+@@ -4,7 +4,7 @@ AM_CXXFLAGS = -Wall
+ 
+ noinst_LIBRARIES = libmp4v2.a 
+ 
+-noinst_HEADERS = mp4.h mpeg4ip.h mpeg4ip_version.h mpeg4ip_config.h
++noinst_HEADERS = mp4.h mpeg4ip.h mpeg4ip_version.h # mpeg4ip_config.h
+ 
+ libmp4v2_a_SOURCES = \
+ 	3gp.cpp \
+--- origsrc/faac-1.28/common/mp4v2/mpeg4ip.h	2009-01-26 16:42:35.000000000 -0600
++++ src/faac-1.28/common/mp4v2/mpeg4ip.h	2009-04-05 06:11:54.296875000 -0500
+@@ -200,6 +200,9 @@ typedef unsigned int socklen_t;
+ #define u_int16_t uint16_t
+ #define u_int32_t uint32_t
+ #define u_int64_t uint64_t
++#endif
++
++#if defined(sun) || defined(__CYGWIN__)
+ #define __STRING(expr) #expr
+ #endif
+ 
+--- origsrc/faac-1.28/configure.in	2009-03-30 10:53:22.968750000 -0500
++++ src/faac-1.28/configure.in	2009-03-30 12:05:24.187500000 -0500
+@@ -43,7 +43,7 @@ else
+   if test x$WITHMP4V2 = xyes; then
+      AC_MSG_NOTICE([*** Building with internal mp4v2 ***])
+      AM_CONDITIONAL(WITH_MP4V2, true)
+-     AC_CONFIG_LINKS(common/mp4v2/mpeg4ip_config.h:config.h)
++     AC_CONFIG_LINKS(mpeg4ip_config.h:config.h)
+      MY_DEFINE(HAVE_LIBMP4V2)
+   else
+      AC_MSG_NOTICE([*** Building WITHOUT mp4v2 ***])
+--- origsrc/faac-1.28/frontend/Makefile.am	2009-03-30 10:53:22.984375000 -0500
++++ src/faac-1.28/frontend/Makefile.am	2009-04-05 06:16:25.218750000 -0500
+@@ -5,7 +5,7 @@ faac_SOURCES = main.c input.c
+ 
+ if WITH_MP4V2
+ INCLUDES = -I$(top_srcdir)/include -I$(top_srcdir)/common/mp4v2
+-LDADD = $(top_builddir)/libfaac/libfaac.la $(top_srcdir)/common/mp4v2/libmp4v2.a -lm -lstdc++
++LDADD = $(top_builddir)/libfaac/libfaac.la $(top_builddir)/common/mp4v2/libmp4v2.a -lm -lstdc++
+ else
+ INCLUDES = -I$(top_srcdir)/include 
+ if WITH_EXTERNAL_MP4V2
