@@ -1,4 +1,4 @@
 category: Audio
-requires: libfaac0 libgcc1 libstdc++6
+requires: libfaac0 libgcc1 libmp4v2_1
 sdesc: "MPEG2/MPEG4/AAC encoding library (utility)"
 ldesc: "FAAC provides a MPEG-4 AAC encoder library and utility"

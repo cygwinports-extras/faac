@@ -3,20 +3,19 @@ faac
 FAAC provides a MPEG-4 AAC encoder library and utility.
 
 Runtime requirements:
-  cygwin-1.7.0-45
+  cygwin-1.7.0-52
   libgcc1-4.3.2-2
-  libstdc++6-4.3.2-2
+  libmp4v2_1-1.9.1-1
 
 Build requirements:
 (besides corresponding devel packages)
   autoconf2.5-2.63-10
-  automake1.10-1.10.1-10
-  binutils-20080624-2
-  cygport-0.9.6-1
+  automake1.10-1.10.2-10
+  binutils-2.19.51-1
+  cygport-0.9.8-1
   gawk-3.1.6-2
   gcc4-core-4.3.2-2
-  gcc4-g++-4.3.2-2
-  libtool-2.2.7a-12
+  libtool-2.2.7a-14
   make-3.81-2
   sed-4.1.5-2
 
@@ -71,6 +70,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 1.28-11 -----
+Rebuilt against new libmp4v2.
 
 ----- version 1.28-10 -----
 Initial release for Cygwin 1.7.
