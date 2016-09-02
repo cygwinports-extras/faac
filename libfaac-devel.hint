@@ -1,5 +1,0 @@
-category: Audio
-requires: libfaac0
-external-source: faac
-sdesc: "MPEG2/MPEG4/AAC encoding library (development)"
-ldesc: "FAAC provides a MPEG-4 AAC encoder library and utility"

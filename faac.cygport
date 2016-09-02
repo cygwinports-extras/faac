@@ -1,0 +1,23 @@
+NAME="faac"
+VERSION=1.28
+RELEASE=11
+CATEGORY="Libs"
+SUMMARY="MPEG2/MPEG4/AAC encoding library"
+DESCRIPTION="FAAC provides a MPEG-4 AAC encoder library and utility"
+HOMEPAGE="http://www.audiocoding.com/"
+SRC_URI="mirror://sourceforge/faac/faac-${VERSION}.tar.gz"
+PATCH_URI="
+	mirror://portage/media-libs/faac/files/faac-1.28-external-libmp4v2.patch
+	1.28-no-undefined.patch
+"
+
+PKG_NAMES="faac libfaac0 libfaac-devel"
+faac_CATEGORY="Audio"
+faac_SUMMARY=${SUMMARY/library/utility}
+faac_CONTENTS='usr/bin/*.exe usr/share/doc/ usr/share/man/man1/'
+libfaac0_CONTENTS='usr/bin/cygfaac-0.dll'
+libfaac_devel_CONTENTS='usr/include/ usr/lib/'
+
+CYGCONF_ARGS="--enable-drm"
+
+HTMLDOCS="docs/*.html"
