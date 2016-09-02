@@ -8,6 +8,8 @@ HOMEPAGE="http://www.audiocoding.com/"
 SRC_URI="mirror://sourceforge/faac/faac-${VERSION}.tar.gz"
 PATCH_URI="
 	mirror://portage/media-libs/faac/files/faac-1.28-external-libmp4v2.patch
+	mirror://portage/media-libs/faac/files/faac-1.28-libmp4v2_r479_compat.patch
+	mirror://portage/media-libs/faac/files/faac-1.28-inttypes.patch
 	1.28-no-undefined.patch
 "
 
@@ -18,6 +20,7 @@ faac_CONTENTS='usr/bin/*.exe usr/share/doc/ usr/share/man/man1/'
 libfaac0_CONTENTS='usr/bin/cygfaac-0.dll'
 libfaac_devel_CONTENTS='usr/include/ usr/lib/'
 
+WANT_AUTOMAKE=1.11
 CYGCONF_ARGS="--enable-drm"
 
 HTMLDOCS="docs/*.html"
